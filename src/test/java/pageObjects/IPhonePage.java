@@ -20,8 +20,15 @@ public class IPhonePage extends BasePage {
     @FindBy(xpath = "//span[normalize-space()='Add to Cart']")
     private WebElement addtocart;
 
+    @FindBy(xpath = "//div[@class='product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12']//button[2]")
+    private WebElement addToWishList;
+
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement wishlListSucessMessgae;
+
+    public void setAddToWishList(){
+       addToWishList.click();
+    }
 
     public boolean isPhoneExists() {
         try {

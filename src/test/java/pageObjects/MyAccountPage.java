@@ -19,7 +19,7 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//input[@placeholder='Search']")
     private WebElement searchBar;
 
-    @FindBy(xpath = "//button[@class='btn btn-light btn-lg']")
+    @FindBy(xpath = "//i[@class='fa fa-search']")
     private WebElement searchbtn;
 
 

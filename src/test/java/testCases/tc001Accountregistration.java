@@ -10,7 +10,7 @@ import pageObjects.HomePage;
 public class tc001Accountregistration extends BaseClass {
 
 
-    @Test(groups = {"Regression", "Master"})
+    @Test ( groups = {"Regression", "Master"})
     void verify_account_registration() throws InterruptedException {
 
         HomePage hp = new HomePage(driver);
@@ -25,8 +25,10 @@ public class tc001Accountregistration extends BaseClass {
         ap.setLastName(RandomStringUtils.randomAlphabetic(5));
 
         ap.setEmail(randomString() + "@gmail.com");
-        ap.setPassword((randomAlphaString()));
-
+        ap.setTelephone(randomNumber());
+        String pass =randomAlphaString();
+        ap.setPassword(pass);
+        ap.setConpassword(pass);
         ap.setAgree();
         ap.setContinuee();
 

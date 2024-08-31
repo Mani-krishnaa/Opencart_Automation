@@ -14,6 +14,15 @@ public class IPhonePage extends BasePage {
     @FindBy(xpath = "//a[normalize-space()='iPhone']")
     private WebElement iphone;
 
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    private WebElement cartSuccesPage;
+
+    @FindBy(xpath = "//span[normalize-space()='Add to Cart']")
+    private WebElement addtocart;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    private WebElement wishlListSucessMessgae;
+
     public boolean isPhoneExists() {
         try {
             return iphone.isDisplayed();
@@ -21,5 +30,27 @@ public class IPhonePage extends BasePage {
             return false;
         }
     }
+
+    public void setCart() {
+        addtocart.click();
+    }
+
+    public boolean setWishListSuccesPage() {
+        try {
+            return wishlListSucessMessgae.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean setCartSuccesPage() {
+        try {
+            return cartSuccesPage.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
 }
 

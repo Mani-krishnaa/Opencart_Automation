@@ -26,8 +26,18 @@ public class IPhonePage extends BasePage {
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement wishlListSucessMessgae;
 
-    public void setAddToWishList(){
-       addToWishList.click();
+
+    @FindBy(xpath = "//i[@class='fa fa-exchange']")
+    private WebElement addToCompare;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    private WebElement compareSuceesMessage;
+
+    @FindBy(xpath = "//a[normalize-space()='product comparison']")
+    private WebElement link;
+
+    public void setAddToWishList() {
+        addToWishList.click();
     }
 
     public boolean isPhoneExists() {
@@ -56,6 +66,21 @@ public class IPhonePage extends BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+    public void setAddToCompare() {
+        addToCompare.click();
+    }
+
+    public boolean SetCompareSuceesMessage() {
+        try {
+            return compareSuceesMessage.isDisplayed();
+        } catch (Exception e) {
+           return false;
+        }
+    }
+
+    public void setLink() {
+        link.click();
     }
 
 

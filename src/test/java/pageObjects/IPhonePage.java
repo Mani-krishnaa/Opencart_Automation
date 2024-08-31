@@ -26,6 +26,8 @@ public class IPhonePage extends BasePage {
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement wishlListSucessMessgae;
 
+    @FindBy(xpath = "//a[normalize-space()='shopping cart']")
+    private WebElement cartLink;
 
     @FindBy(xpath = "//i[@class='fa fa-exchange']")
     private WebElement addToCompare;
@@ -48,6 +50,10 @@ public class IPhonePage extends BasePage {
         }
     }
 
+    public void setCartLink() {
+        cartLink.click();
+    }
+
     public void setCart() {
         addtocart.click();
     }
@@ -60,6 +66,10 @@ public class IPhonePage extends BasePage {
         }
     }
 
+    public void setCartSuccesPag() {
+
+    }
+
     public boolean setCartSuccesPage() {
         try {
             return cartSuccesPage.isDisplayed();
@@ -67,6 +77,7 @@ public class IPhonePage extends BasePage {
             return false;
         }
     }
+
     public void setAddToCompare() {
         addToCompare.click();
     }
@@ -75,7 +86,7 @@ public class IPhonePage extends BasePage {
         try {
             return compareSuceesMessage.isDisplayed();
         } catch (Exception e) {
-           return false;
+            return false;
         }
     }
 

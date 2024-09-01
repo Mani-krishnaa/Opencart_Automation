@@ -5,6 +5,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -24,29 +26,29 @@ public class BaseClass {
     //  public ExcelUtility ex = new ExcelUtility();
     @BeforeClass(groups = {"Sanity", "Regression", "Master"})
     @Parameters({"os", "browser"})
-    public void setup() throws IOException {
+    public void setup(String os, String br) throws IOException {
         //loading config.prpprties file
 
         FileReader file = new FileReader("/home/manikrishna/Intellij/Open_cartAutomation/src/test/resources/config.propirties");
         p = new Properties();
         p.load(file);
 
-        driver = new ChromeDriver();
+        // driver = new ChromeDriver();
 
-//        switch (br.toLowerCase()) {
-//            case "chrome":
-//                driver = new ChromeDriver();
-//                break;
-//            case "edge":
-//                driver = new EdgeDriver();
-//                break;
-//            case "firefox":
-//                driver = new FirefoxDriver();
-//                break;
-//            default:
-//                System.out.println("Invalid Browser Name");
-//                return;
-
+        switch (br.toLowerCase()) {
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
+            default:
+                System.out.println("Invalid Browser Name");
+                return;
+        }
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -54,6 +56,7 @@ public class BaseClass {
         driver.get(p.getProperty("appurl")); //reading url from proprties file
         driver.manage().window().maximize();
     }
+
 
     @AfterClass(groups = {"Sanity", "Regression", "Master"})
     public void teardown() {
@@ -86,6 +89,8 @@ public class BaseClass {
         File targetFile = new File(targetFilePath);
         sourceFile.renameTo(targetFile);
 
-        return  targetFilePath;
+        return targetFilePath;
+
+
     }
 }

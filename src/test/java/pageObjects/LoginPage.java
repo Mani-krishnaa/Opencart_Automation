@@ -19,15 +19,15 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//input[@value='Login']")
     private WebElement btnLogin;
 
-    public void setTxtEmail(String mail) {
+    public void enterEmail(String mail) {
         txtEmail.sendKeys(mail);
     }
 
-    public void setTxtPassword(String password) {
+    public void enterPassword(String password) {
         txtPassword.sendKeys(password);
     }
 
-    public void setBtnLogin() {
+    public void clickLoginButton() {
         btnLogin.click();
     }
 

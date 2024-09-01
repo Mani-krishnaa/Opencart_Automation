@@ -9,7 +9,7 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.tc001Accountregistration">
+            <class name="testCases.TC001AccountRegistration">
                 <methods>
                     <include name="verify_account_registration"/>
                 </methods>
@@ -22,7 +22,7 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="testCases.tc001Accountregistration">
+            <class name="testCases.TC001AccountRegistration">
                 <methods>
                     <include name="verify_account_registration"/>
                 </methods>
@@ -35,7 +35,7 @@
         <parameter name="os" value="firefox"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.tc001Accountregistration">
+            <class name="testCases.TC001AccountRegistration">
                 <methods>
                     <include name="verify_account_registration"/>
                 </methods>

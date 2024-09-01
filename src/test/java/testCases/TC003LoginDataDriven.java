@@ -10,48 +10,45 @@ package testCases;
 
 import GenericUtility.BaseClass;
 import GenericUtility.DataProviders;
-import org.apache.poi.ss.formula.functions.T;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 
-public class tc003LoginDataDriven extends BaseClass {
+public class TC003LoginDataDriven extends BaseClass {
 
     @Test(dataProvider = "LoginData", dataProviderClass = DataProviders.class, groups = "Datadriven")
     // The second Parametre is for here our login data is in another package so we need to provide Class also in which class it is present
-    public void verify_loginDDT(String email, String pwd, String expextedResult) throws InterruptedException {
+    public void verifyLoginDataDriven(String email, String pwd, String expextedResult) throws InterruptedException {
 
             //HomePage
-            HomePage hm = new HomePage(driver);
-            hm.getMyAccount();
-            Thread.sleep(1000);
-            hm.getLogin();
-            Thread.sleep(1000);
-            //Login
-            LoginPage lg = new LoginPage(driver);
-            lg.setTxtEmail(email);
-            lg.setTxtPassword(pwd);
-            Thread.sleep(1000);
-            lg.setBtnLogin();
+            HomePage homePage = new HomePage(driver);
+            homePage.clickMyAccount();
+            homePage.clickLogin();
+
+            //LoginPage
+            LoginPage loginPage = new LoginPage(driver);
+            loginPage.enterEmail(email);
+            loginPage.enterPassword(pwd);
+            loginPage.clickLoginButton();
 
             //MyAccount
-            MyAccountPage mp = new MyAccountPage(driver);
-            boolean message = mp.ismyAccountPageExits();
+            MyAccountPage myAccountPage = new MyAccountPage(driver);
+            boolean isAccountPageDisplayed = myAccountPage.ismyAccountPageButtonExits();
 
             if (expextedResult.equalsIgnoreCase("Valid")) {
-                if (message == true) {
-                    mp.clickLogout();
+                if (isAccountPageDisplayed) {
+                    myAccountPage.clickLogout();
                     Assert.assertTrue(true);
                 } else {
-                    Assert.assertTrue(false);
+                    Assert.fail();
                 }
             }
             if (expextedResult.equalsIgnoreCase("Invalid")) {
-                if (message == true) {
-                    mp.clickLogout();
-                    Assert.assertTrue(false);
+                if (isAccountPageDisplayed) {
+                    myAccountPage.clickLogout();
+                    Assert.fail();
                 } else {
                     Assert.assertTrue((false));
                 }

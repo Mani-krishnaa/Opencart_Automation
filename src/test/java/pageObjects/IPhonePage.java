@@ -11,7 +11,7 @@ public class IPhonePage extends BasePage {
 
     }
 
-    @FindBy(xpath = "//a[normalize-space()='iPhone']")
+    @FindBy(xpath = "//div[@class='caption']//a[contains(text(),'iPhone')]")
     private WebElement iphone;
 
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
@@ -54,7 +54,7 @@ public class IPhonePage extends BasePage {
         cartLink.click();
     }
 
-    public void setCart() {
+    public void addToCart() {
         addtocart.click();
     }
 
@@ -78,7 +78,7 @@ public class IPhonePage extends BasePage {
         }
     }
 
-    public void setAddToCompare() {
+    public void addToCompare() {
         addToCompare.click();
     }
 
@@ -90,7 +90,7 @@ public class IPhonePage extends BasePage {
         }
     }
 
-    public void setLink() {
+    public void clickComparisonLink() {
         link.click();
     }
 

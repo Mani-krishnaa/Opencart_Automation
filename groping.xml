@@ -16,9 +16,9 @@
         <parameter name="os" value="Windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.tc001Accountregistration"/>
-            <class name="testCases.tc002LoginTest"/>
-            <class name="testCases.tc003LoginDataDriven">
+            <class name="testCases.TC001AccountRegistration"/>
+            <class name="testCases.TC002LoginTest"/>
+            <class name="testCases.TC003LoginDataDriven">
 
                 <methods>
                     <include name="verify_account_registration"/>

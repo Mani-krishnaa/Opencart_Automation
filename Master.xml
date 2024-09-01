@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suite" thread-count="5">
+    <listeners>
+        <listener class-name="GenericUtility.ExtentReportManager"/>
+    </listeners>
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC10MyAccountPageTest.java">
+        <classes>
+            <class name="testCases.TC10MyAccountPageTest">
+                <methods>
+                    <include name="verifyMyAccountPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC001AccountRegistration.java">
+        <classes>
+            <class name="testCases.TC001AccountRegistration">
+                <methods>
+                    <include name="verifyAccountRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC002LoginTest.java">
+        <classes>
+            <class name="testCases.TC002LoginTest">
+                <methods>
+                    <include name="verify_login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC003LoginDataDriven.java">
+        <classes>
+            <class name="testCases.TC003LoginDataDriven">
+                <methods>
+                    <include name="verifyLoginDataDriven"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC004SeachPhoneTest.java">
+        <classes>
+            <class name="testCases.TC004SeachPhoneTest">
+                <methods>
+                    <include name="verifyProductSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC005AddToCartTest.java">
+        <classes>
+            <class name="testCases.TC005AddToCartTest">
+                <methods>
+                    <include name="verifyAddToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC006WishListTest.java">
+        <classes>
+            <class name="testCases.TC006WishListTest">
+                <methods>
+                    <include name="verifyWishlist"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC007ProductComparisionTest.java">
+        <classes>
+            <class name="testCases.TC007ProductComparisionTest">
+                <methods>
+                    <include name="verifyProductComparison"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC008ProductComparisonLinkTest.java">
+        <classes>
+            <class name="testCases.TC008ProductComparisonLinkTest">
+                <methods>
+                    <include name="verifyLinkInSuccessMessage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC009CheckoutTest.java">
+        <classes>
+            <class name="testCases.TC009CheckoutTest">
+                <methods>
+                    <include name="verifyCheckout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

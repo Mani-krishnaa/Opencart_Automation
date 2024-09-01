@@ -9,7 +9,7 @@ import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 
 public class TC005AddToCartTest extends BaseClass {
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyAddToCart() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();
@@ -23,7 +23,6 @@ public class TC005AddToCartTest extends BaseClass {
         MyAccountPage myAccountPage = new MyAccountPage(driver);
         myAccountPage.setSearchBar(p.getProperty("searchProductName"));
         myAccountPage.setSearchbtn();
-
 
         IPhonePage iPhonePage = new IPhonePage(driver);
         iPhonePage.addToCart();

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pageObjects.*;
 
 public class TC009CheckoutTest extends BaseClass {
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyCheckout() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();

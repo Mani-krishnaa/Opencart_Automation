@@ -9,7 +9,7 @@ import pageObjects.MyAccountPage;
 
 public class TC10MyAccountPageTest extends BaseClass {
 
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyMyAccountPage() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();

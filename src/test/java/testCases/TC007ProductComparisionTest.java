@@ -9,7 +9,7 @@ import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 
 public class TC007ProductComparisionTest extends BaseClass {
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyProductComparison() {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();

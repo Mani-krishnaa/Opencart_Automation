@@ -10,7 +10,7 @@ import pageObjects.MyAccountPage;
 
 public class TC006WishListTest extends BaseClass {
 
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyWishlist() {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();

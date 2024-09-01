@@ -8,7 +8,7 @@ import pageObjects.*;
 public class TC008ProductComparisonLinkTest extends BaseClass {
 
 
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyLinkInSuccessMessage() {
         HomePage homePage = new HomePage(driver);
         homePage.clickMyAccount();

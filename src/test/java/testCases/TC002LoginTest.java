@@ -14,8 +14,6 @@ public class TC002LoginTest extends BaseClass {
     @Test(groups = {"Sanity","Master"})
     public void verify_login() throws InterruptedException {
 
-
-
             HomePage homePage = new HomePage(driver);
             homePage.clickMyAccount();
             homePage.clickLogin();

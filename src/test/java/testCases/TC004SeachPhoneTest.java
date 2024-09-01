@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class TC004SeachPhoneTest extends BaseClass {
 
-    @Test
+    @Test(groups = {"Regression", "Master"})
     void verifyProductSearch() throws InterruptedException {
 
         HomePage homePage = new HomePage(driver);

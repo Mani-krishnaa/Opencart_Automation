@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Suite" thread-count="5">
+<suite name="Master Suite" thread-count="5" >
     <listeners>
         <listener class-name="GenericUtility.ExtentReportManager"/>
     </listeners>
+
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <test verbose="2" preserve-order="true"
           name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC10MyAccountPageTest.java">
         <classes>

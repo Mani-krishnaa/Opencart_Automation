@@ -29,7 +29,7 @@ public class ExtentReportManager implements ITestListener {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd>HH.mm.ss").format(new Date());
 
         repName = "Test-Report-" + timeStamp + ".html";
-        sparkReporter = new ExtentSparkReporter("//reports//" + repName);
+        sparkReporter = new ExtentSparkReporter("reports/" + repName);
 
         sparkReporter.config().setDocumentTitle("Open Cart Automation");// title of the report
         sparkReporter.config().setReportName("OpenCart Functional testing");// name of the report
@@ -90,15 +90,15 @@ public class ExtentReportManager implements ITestListener {
 
         extent.flush();
 
-        String pathOfExentReport = System.getProperty("user.dir") + "//reports//" + repName;
-
-        File extentReport = new File(pathOfExentReport);
-
-
-        try {
-            Desktop.getDesktop().browse(extentReport.toURI());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String pathOfExentReport = System.getProperty("user.dir") + "/reports/" + repName;
+//
+//        File extentReport = new File(pathOfExentReport);
+//
+//
+//        try {
+//            Desktop.getDesktop().browse(extentReport.toURI());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

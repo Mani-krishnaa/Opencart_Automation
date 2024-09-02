@@ -6,7 +6,7 @@
     </listeners>
 
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="chrome"/>
     <test verbose="2" preserve-order="true"
           name="/home/manikrishna/Intellij/Open_cartAutomation/src/test/java/testCases/TC10MyAccountPageTest.java">
         <classes>
